@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="shortcut icon" href="./image/icon.jpg">
+		<title>Trading cms</title>
+	</head>
+	<body>
+		<nav>
+			<button class="real">Real 1 <i class="fa-solid fa-trash"></i></button>
+			<button class="add-page">&#43;</button>
+		</nav>
+		<div class="container">
+			<div class="first-line">
+				<h1>Trading Overview</h1>
+
+				<select id="timeInterval">
+					<option value="all">All</option>
+					<option value="yearly">Yearly</option>
+					<option value="six-month">6 Month</option>
+					<option value="monthly">Monthly</option>
+					<option value="weekly">Weekly</option>
+					<option value="daily">Daily</option>
+					<option value="four-hours">4 Hours</option>
+					<option value="one-hour">1 Hour</option>
+				    </select>
+				    
+
+			</div>
+			
+
+			<!-- trading objectives started -->
+
+			<div class="overview-container">
+				<div class="left">
+					<h2>trading objectives</h2>
+
+					<div class="objects-boxes">
+						<div class="tr-day hover-effect">
+							<p>minimum trading days</p>
+							<div class="min-day-box">
+								<p>minimum</p>
+								<span class="min-day">5 days</span>
+							</div>
+							<div class="current-result-box">
+								<p>current result</p>
+								<span class="current-result">4 days</span>
+							</div>
+							<span class="condition">ongoing</span>
+						</div>
+
+						<div class="daily-loss-limit hover-effect">
+							<p>daily loss limit</p>
+							<div class="daily-loss-box">
+								<p>max. loss</p>
+								<span class="max-loss">$750</span>
+							</div>
+							<div class="max-loss-recorded-box">
+								<p>max. loss recorded</p>
+								<span class="max-loss-recorded">$-791.78</span>
+							</div>
+							<span class="condition">failed</span>
+						</div>
+
+						<div class="overall-loss-limit hover-effect">
+							<p>overall loss limit</p>
+							<div class="overall-loss-box">
+								<p>max. loss</p>
+								<span class="max-loss">$1,500,000</span>
+							</div>
+							<div class="max-loss-recorded-box">
+								<p>max. loss recorded</p>
+								<span class="max-loss-recorded">$-389.62</span>
+							</div>
+							<span class="condition">ongoing</span>
+						</div>
+
+						<div class="profit-target hover-effect">
+							<p>profit target</p>
+							<div class="min-box">
+								<p>minimum</p>
+								<span class="min-target">$1,500,000</span>
+							</div>
+							<div class="current-target-box">
+								<p>current result</p>
+								<span class="current-result">$0.00</span>
+							</div>
+							<span class="condition">ongoing</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="right">
+					<table>
+						<tr>
+							<th>Details Stats</th>
+						</tr>
+						<tr class="edit-tr">
+							<td>equity</td>
+							<td>
+								$<span class="detail-equity">14610.38</span>
+							</td>
+						</tr>
+						<tr class="edit-tr">
+							<td>balance</td>
+							<td>
+								$<span class="detail-balance">14610.38</span>
+							</td>
+						</tr>
+						<tr class="edit-tr">
+							<td>avg. winning trade</td>
+							<td>$<span class="detail-winning">28.79</span></td>
+						</tr>
+						<tr class="edit-tr">
+							<td>avg. losing trade</td>
+							<td>$<span class="detail-losing">51.92</span></td>
+						</tr>
+						<tr class="edit-tr">
+							<td>trades</td>
+							<td>57</span></td>
+						</tr>
+						<tr class="edit-tr">
+							<td>win rate</td>
+							<td><span class="detail-win-rate"> 61.4</span>%</td>
+						</tr>
+						<tr class="edit-tr">
+							<td>Average R/R</td>
+							<td><span class="average-r-r"> 0</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<!--! trading objectives ended -->
+
+			<!-- trading history started -->
+
+			<div class="trading-history-container">
+				<div class="history-title">
+					<p>trading history</p>
+					<button class="downloadBtn">download</button>
+				</div>
+
+				<div class="table-container">
+					<table id="content">
+						<thead>
+							<tr class="main-table-header">
+								<th>SN</th>
+								<th>Currency Type</th>
+								<th>Time</th>
+								<th>SL</th>
+								<th>Tp</th>
+								<th>R/R</th>
+								<th>Lots</th>
+								<th>Profit</th>
+								<th>Note</th>
+							</tr>
+							<tr>
+								<th></th>
+								<th><select id="input-currency-type" class="input-currency-type" name="currency-type">
+									<option value="EUR/USD" selected>EUR/USD</option>
+									<option value="GBP/USD">GBP/USD</option>
+									<option value="USD/JPY">XAUUSD</option>
+									<option value="USD/JPY">US30</option>
+									<option value="USD/JPY">US100</option>
+									<option value="USD/JPY">US500</option>
+									<option value="USD/JPY">DXA</option>
+									<option value="USD/JPY">USOIL</option>
+									<option value="USD/JPY">XAGUSD</option>
+									<option value="AUD/CAD">AUD/CAD</option>
+									<option value="AUD/CHF">AUD/CHF</option>
+									<option value="AUD/JPY">AUD/JPY</option>
+									<option value="AUD/NZD">AUD/NZD</option>
+									<option value="AUD/USD">AUD/USD</option>
+									<option value="CAD/CHF">CAD/CHF</option>
+									<option value="CAD/JPY">CAD/JPY</option>
+									<option value="CHF/JPY">CHF/JPY</option>
+									<option value="EUR/AUD">EUR/AUD</option>
+									<option value="EUR/CAD">EUR/CAD</option>
+									<option value="EUR/CHF">EUR/CHF</option>
+									<option value="EUR/GBP">EUR/GBP</option>
+									<option value="EUR/JPY">EUR/JPY</option>
+									<option value="EUR/NZD">EUR/NZD</option>
+									<option value="GBP/AUD">GBP/AUD</option>
+									<option value="GBP/CAD">GBP/CAD</option>
+									<option value="GBP/CHF">GBP/CHF</option>
+									<option value="GBP/JPY">GBP/JPY</option>
+									<option value="GBP/NZD">GBP/NZD</option>
+									<option value="NZD/CAD">NZD/CAD</option>
+									<option value="NZD/CHF">NZD/CHF</option>
+									<option value="NZD/JPY">NZD/JPY</option>
+									<option value="NZD/USD">NZD/USD</option>
+									<option value="USD/CAD">USD/CAD</option>
+									<option value="USD/CHF">USD/CHF</option>
+									<option value="USD/JPY">USD/JPY</option>
+									
+								    </select></th>
+								<th><input type="datetime-local" placeholder="Time" id="input-time" dir="ltr"></th>
+								<th><input type="text" placeholder="SL" id="input-sl"></th>
+								<th><input type="text" placeholder="Tp" id="input-tp"></th>
+								<th><input type="text" placeholder="R/R" id="input-r-r"></th>
+								<th><input type="text" placeholder="Lots" id="input-lots"></th>
+								<th><input type="text" placeholder="Profit" id="input-profit"></th>
+								<th>
+									<button
+				class="add-new-note-btn">
+				&#43;
+			</button>
+								</th>
+							</tr>
+						</thead>
+						<tbody class="table-list">
+							<!-- insert table detail here -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="pagenumbers" id="pagination-container"></div>
+		<!--! trading history ended -->
+
+		<!-- pop up section started -->
+
+		<div class="popup-box">
+			<div class="popup">
+				<div class="content">
+					<header>
+						<p></p>
+						<i class="uil uil-times">&times</i>
+					</header>
+					<form>
+						<div class="row title">
+							<label for="img">Select image:</label>
+							<input
+								type="file"
+								id="img"
+								name="img"
+								accept="image/*" />
+						</div>
+						<div class="row description">
+							<label>Description</label>
+							<textarea spellcheck="false"></textarea>
+						</div>
+						<button onclick="event.preventDefault()"></button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!--! pop up section ended -->
+
+		<script src="./js/script.js"></script>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+</html>
